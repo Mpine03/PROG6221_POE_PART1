@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace recipeApp
 {
     class recipe
@@ -55,7 +55,7 @@ namespace recipeApp
             Console.WriteLine("Recipe Ingredients:");
             for (int i = 0; i < nameOfIngredient.Length; i++)
             {
-                Console.WriteLine($"{quantity[i]} {unitOfMeasurement[i]} of {nameOfIngredient[i]}");
+                Console.WriteLine($"{quantity[i]}{unitOfMeasurement[i]} of {nameOfIngredient[i]}");
             }
 
             Console.WriteLine("Recipe Steps:");
