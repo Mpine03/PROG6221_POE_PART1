@@ -30,7 +30,7 @@ namespace recipeApp
             {
                 Console.WriteLine($"Enter the name,quantity and the unit of measurement of your ingredients #{i + 1}:");
 
-                Console.WriteLine("Name of Ingedient:");
+                Console.WriteLine("Name of ingredient:");
                 nameOfIngredient[i] = Console.ReadLine();
 
                 Console.WriteLine("Quantity of the ingredient:");
