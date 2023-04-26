@@ -17,6 +17,7 @@ namespace recipeApp
         }
         public void userInput()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("How many ingredients are you going to use?");
             int numOfIngredients = Convert.ToInt32(Console.ReadLine());
 
@@ -52,6 +53,7 @@ namespace recipeApp
         }
         public void recipeOutput()
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Recipe Ingredients:");
             for (int i = 0; i < nameOfIngredient.Length; i++)
             {
@@ -96,6 +98,7 @@ namespace recipeApp
 
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine("--------------------------------------------------------------");
                 Console.WriteLine("How to use this application:");
                 Console.WriteLine("--------------------------------------------------------------");
