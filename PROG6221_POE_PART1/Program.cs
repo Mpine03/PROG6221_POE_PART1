@@ -54,13 +54,17 @@ namespace recipeApp
         public void recipeOutput()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("*************************");
             Console.WriteLine("Recipe Ingredients:");
+            Console.WriteLine("*************************");
             for (int i = 0; i < nameOfIngredient.Length; i++)
             {
                 Console.WriteLine($"{quantity[i]}{unitOfMeasurement[i]} of {nameOfIngredient[i]}");
             }
-
+            
+            Console.WriteLine("*************************");
             Console.WriteLine("Recipe Steps:");
+            Console.WriteLine("*************************");
             for (int i = 0; i < steps.Length; i++)
             {
                 Console.WriteLine($"STEP_{i + 1}.{steps[i]}");
