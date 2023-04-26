@@ -67,7 +67,7 @@ namespace recipeApp
             Console.WriteLine("*************************");
             for (int i = 0; i < steps.Length; i++)
             {
-                Console.WriteLine($"STEP_{i + 1}.{steps[i]}");
+                Console.WriteLine($"{i + 1}.{steps[i]}");
             }
 
         }
