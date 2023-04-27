@@ -75,7 +75,7 @@ namespace recipeApp
             Console.WriteLine("*************************");
             for (int i = 0; i < nameOfIngredient.Length; i++)
             {
-                Console.WriteLine($"{quantity[i]}{unitOfMeasurement[i]} of {nameOfIngredient[i]}");
+                Console.WriteLine($"{quantity[i]} {unitOfMeasurement[i]} of {nameOfIngredient[i]}");
             }
             
              //Outputs the steps
