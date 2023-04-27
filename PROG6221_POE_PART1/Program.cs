@@ -48,6 +48,7 @@ namespace recipeApp
             
             
             //Prompting user to enter the number of steps
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("How many steps are there going to be in your recipe?");
             int numOfSteps = Convert.ToInt32(Console.ReadLine());
             
@@ -146,6 +147,7 @@ namespace recipeApp
                         break;
 
                     case "3":
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Enter a scaling factor: 0,5 or 2 or 3");
                         double factor = Convert.ToDouble(Console.ReadLine());
                         rec.scaling(factor);
