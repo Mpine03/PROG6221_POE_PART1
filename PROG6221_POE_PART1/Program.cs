@@ -146,7 +146,7 @@ namespace recipeApp
                         break;
 
                     case "3":
-                        Console.WriteLine("Enter a scaling factor: 0.5, 2 or 3");
+                        Console.WriteLine("Enter a scaling factor: 0,5 or 2 or 3");
                         double factor = Convert.ToDouble(Console.ReadLine());
                         rec.scaling(factor);
                         break;
