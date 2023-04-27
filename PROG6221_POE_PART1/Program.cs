@@ -7,10 +7,11 @@ namespace recipeApp
         double[] quantity;
         string[] unitOfMeasurement;
         string[] steps;
-        double initialQuantity;
+        double initialQuantity;  // add this field to store the original quantity
 
         public recipe()
         {
+            //Initializing empty arrays fpr ingredients,quantities,units as well as steps
             nameOfIngredient = new string[0];
             quantity = new double[0];
             unitOfMeasurement = new string[0];
@@ -19,9 +20,12 @@ namespace recipeApp
         public void userInput()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
+            
+             //Prompting the user to enter the number of ingredients 
             Console.WriteLine("How many ingredients are you going to use?");
             int numOfIngredients = Convert.ToInt32(Console.ReadLine());
-
+            
+             //Initializing the arrays with the correct size
             nameOfIngredient = new string[numOfIngredients];
             quantity = new double[numOfIngredients];
             unitOfMeasurement = new string[numOfIngredients];
@@ -29,6 +33,7 @@ namespace recipeApp
 
             for (int i = 0; i < numOfIngredients; i++)
             {
+                 //Prompting user to enter the details for each ingredient
                 Console.WriteLine($"Enter the name,quantity and the unit of measurement of your ingredients #{i + 1}:");
 
                 Console.WriteLine("Name of ingredient:");
@@ -40,23 +45,31 @@ namespace recipeApp
                 Console.WriteLine("Unit of Measurement:");
                 unitOfMeasurement[i] = Console.ReadLine();
             }
-
+            
+            
+            //Prompting user to enter the number of steps
             Console.WriteLine("How many steps are there going to be in your recipe?");
             int numOfSteps = Convert.ToInt32(Console.ReadLine());
-
+            
+            //Initializing the steps array with the correct size
             steps = new string[numOfSteps];
 
             for (int i = 0; i < numOfSteps; i++)
             {
+                //Prompting the user to enter the details for each step
                 Console.WriteLine($"Write a description of what the user should do ( Step number_{i + 1}):");
                 steps[i] = Console.ReadLine();
             }
+           
+            // store the original quantity
            initialQuantity = new double[numOfIngredients];
-            Array.Copy(quantity, initialQuantity, numOfIngredients);
+           Array.Copy(quantity, initialQuantity, numOfIngredients);
         }
         public void recipeOutput()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
+            
+             //Outputs the details of the ingredients
             Console.WriteLine("*************************");
             Console.WriteLine("Recipe Ingredients:");
             Console.WriteLine("*************************");
@@ -65,6 +78,7 @@ namespace recipeApp
                 Console.WriteLine($"{quantity[i]}{unitOfMeasurement[i]} of {nameOfIngredient[i]}");
             }
             
+             //Outputs the steps
             Console.WriteLine("*************************");
             Console.WriteLine("Recipe Steps:");
             Console.WriteLine("*************************");
@@ -76,6 +90,7 @@ namespace recipeApp
         }
         public void scaling(double factor)
         {
+             //Multiplying all the quantities by the scaling factor
             for (int i = 0; i < quantity.Length; i++)
             {
                 quantity[i] = initialQuantity[i] * factor;
@@ -83,6 +98,7 @@ namespace recipeApp
         }
         public void resetQuantities()
         {
+            //Resets all the new quatities to their original values
             for (int i = 0; i < quantity.Length; i++)
             {
                 quantity[i] = initialQuantity;
@@ -90,6 +106,7 @@ namespace recipeApp
         }
         public void clearData()
         {
+             //Resets all the arrays to empty
             nameOfIngredient = new string[0];
             quantity = new double[0];
             unitOfMeasurement = new string[0];
