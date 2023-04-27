@@ -101,7 +101,7 @@ namespace recipeApp
             //Resets all the new quatities to their original values
             for (int i = 0; i < quantity.Length; i++)
             {
-                quantity[i] = initialQuantity;
+                quantity[i] = initialQuantity[i];
             }
         }
         public void clearData()
