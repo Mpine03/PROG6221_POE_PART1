@@ -7,6 +7,7 @@ namespace recipeApp
         double[] quantity;
         string[] unitOfMeasurement;
         string[] steps;
+        double initialQuantity;
 
         public recipe()
         {
@@ -50,6 +51,8 @@ namespace recipeApp
                 Console.WriteLine($"Write a description of what the user should do ( Step number_{i + 1}):");
                 steps[i] = Console.ReadLine();
             }
+           initialQuantity = new double[numOfIngredients];
+            Array.Copy(quantity, initialQuantity, numOfIngredients);
         }
         public void recipeOutput()
         {
@@ -75,14 +78,14 @@ namespace recipeApp
         {
             for (int i = 0; i < quantity.Length; i++)
             {
-                quantity[i] *= factor;
+                quantity[i] = initialQuantity[i] * factor;
             }
         }
         public void resetQuantities()
         {
             for (int i = 0; i < quantity.Length; i++)
             {
-                quantity[i] /= 2;
+                quantity[i] = initialQuantity;
             }
         }
         public void clearData()
