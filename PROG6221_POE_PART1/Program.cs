@@ -7,7 +7,7 @@ namespace recipeApp
         double[] quantity;
         string[] unitOfMeasurement;
         string[] steps;
-        double initialQuantity;  // add this field to store the original quantity
+        double[] initialQuantity;  // add this field to store the original quantity
 
         public recipe()
         {
